@@ -372,7 +372,7 @@ window.codeBlockPro = {"pluginUrl":"http:\/\/kingeric1992.github.io\/blog\/wp-co
 
 
 
-<p>Which means two things: the plugin&#8217;s callback that was registered to enbseries when it&#8217;s first loaded is invalidated, and secondly, plugin&#8217;s DllMain PROC_ATTACH won&#8217;t get invoked again when enbseries loads dllplugins the second time. So, the result is that the dllplugin ends up not receving any enb events if it relied on PROC_ATTACH to initialize and register for enb callbacks.</p>
+<p>Which means two things: the plugin&#8217;s callback that was registered to enbseries when it&#8217;s first loaded is invalidated, and secondly, plugin&#8217;s DllMain PROC_ATTACH won&#8217;t get invoked again when enbseries loads dllplugins the second time. So, the result is that the dllplugin ends up not receving any enb events if it relies on PROC_ATTACH to initialize and register for enb callbacks.</p>
 
 
 
@@ -414,7 +414,7 @@ window.codeBlockPro = {"pluginUrl":"http:\/\/kingeric1992.github.io\/blog\/wp-co
 
 
 
-<p>The question now comes to why FreeLibrary wouldn&#8217;t unload the dllpugin. Eventually I came across this discussion <a href="https://social.msdn.microsoft.com/Forums/vstudio/en-US/3abe477b-ba6f-49d2-894f-efd42165e620/why-windows-generates-an-ignorefreelibrary-entry-in-appcompatflagslayers-registry-?forum=windowscompatibility&quot; data-type=&quot;URL&quot; data-id=&quot;https://social.msdn.microsoft.com/Forums/vstudio/en-US/3abe477b-ba6f-49d2-894f-efd42165e620/why-windows-generates-an-ignorefreelibrary-entry-in-appcompatflagslayers-registry-?forum=windowscompatibility" data-type="URL" data-id="https://social.msdn.microsoft.com/Forums/vstudio/en-US/3abe477b-ba6f-49d2-894f-efd42165e620/why-windows-generates-an-ignorefreelibrary-entry-in-appcompatflagslayers-registry-?forum=windowscompatibility&quot; data-type=&quot;URL&quot; data-id=&quot;https://social.msdn.microsoft.com/Forums/vstudio/en-US/3abe477b-ba6f-49d2-894f-efd42165e620/why-windows-generates-an-ignorefreelibrary-entry-in-appcompatflagslayers-registry-?forum=windowscompatibility">why-windows-generates-an-ignorefreelibrary</a> and the name &#8220;ignoreFreeLibrary&#8221; does ring some bell to what&#8217;s happening to me right now. And voila! The reg key does actually present for GTA5.exe and my plugin.</p>
+<p>The question now comes to why FreeLibrary wouldn&#8217;t unload the dllpugin. Eventually I came across this discussion <a href="https://social.msdn.microsoft.com/Forums/vstudio/en-US/3abe477b-ba6f-49d2-894f-efd42165e620/why-windows-generates-an-ignorefreelibrary-entry-in-appcompatflagslayers-registry-?forum=windowscompatibility&quot; data-type=&quot;URL&quot; data-id=&quot;https://social.msdn.microsoft.com/Forums/vstudio/en-US/3abe477b-ba6f-49d2-894f-efd42165e620/why-windows-generates-an-ignorefreelibrary-entry-in-appcompatflagslayers-registry-?forum=windowscompatibility" data-type="URL" data-id="https://social.msdn.microsoft.com/Forums/vstudio/en-US/3abe477b-ba6f-49d2-894f-efd42165e620/why-windows-generates-an-ignorefreelibrary-entry-in-appcompatflagslayers-registry-?forum=windowscompatibility&quot; data-type=&quot;URL&quot; data-id=&quot;https://social.msdn.microsoft.com/Forums/vstudio/en-US/3abe477b-ba6f-49d2-894f-efd42165e620/why-windows-generates-an-ignorefreelibrary-entry-in-appcompatflagslayers-registry-?forum=windowscompatibility">why-windows-generates-an-ignorefreelibrary</a> and the name &#8220;IgnoreFreeLibrary&#8221; does ring some bell to what&#8217;s happening to me right now. And voila! The reg key does actually present for GTA5.exe and my plugin.</p>
 
 
 
@@ -453,7 +453,7 @@ window.codeBlockPro = {"pluginUrl":"http:\/\/kingeric1992.github.io\/blog\/wp-co
 			
 			
 			<div class="is-layout-flow wp-block-column">
-				<div class="post-navigation-link-next has-text-align-right wp-block-post-navigation-link"><span class="post-navigation-link__label">→</span> <a href="https://kingeric1992.github.io/blog/2023/03/29/enbimageloader-fixed/" rel="next">enbImageLoader fixed</a></div>
+				<div class="post-navigation-link-next has-text-align-right wp-block-post-navigation-link"><span class="post-navigation-link__label">→</span> <a href="https://kingeric1992.github.io/blog/2023/03/29/enbimageloader-fixed/" rel="next">enbImgLoader fixed</a></div>
 			</div>
 			
 		</div>

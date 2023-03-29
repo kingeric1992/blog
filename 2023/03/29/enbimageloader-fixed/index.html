@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name='robots' content='max-image-preview:large' />
-<title>enbImageLoader fixed &#8211; EricExploring</title>
+<title>enbImgLoader fixed &#8211; EricExploring</title>
 <link rel="alternate" type="application/rss+xml" title="EricExploring &raquo; Feed" href="https://kingeric1992.github.io/blog/feed/" />
 <link rel="alternate" type="application/rss+xml" title="EricExploring &raquo; Comments Feed" href="https://kingeric1992.github.io/blog/comments/feed/" />
 <style id='blockbase_font_faces-inline-css'>
@@ -265,7 +265,7 @@ window.codeBlockPro = {"pluginUrl":"http:\/\/kingeric1992.github.io\/blog\/wp-co
 
 	
 	<div class="is-layout-constrained wp-block-group">
-		<h1 style="margin-bottom:calc(2 * var(--wp--style--block-gap));" class="has-text-align-left wp-block-post-title">enbImageLoader fixed</h1>
+		<h1 style="margin-bottom:calc(2 * var(--wp--style--block-gap));" class="has-text-align-left wp-block-post-title">enbImgLoader fixed</h1>
 		
 	</div>
 	
@@ -275,7 +275,7 @@ window.codeBlockPro = {"pluginUrl":"http:\/\/kingeric1992.github.io\/blog\/wp-co
 
 
 
-<p><a rel="noreferrer noopener" href="https://www.nexusmods.com/skyrimspecialedition/mods/83598" data-type="URL" data-id="https://www.nexusmods.com/skyrimspecialedition/mods/83598" target="_blank">Panda</a> kindly send me the crashlog when enbImageLoader plugin crashes which happened to people some times.</p>
+<p><a rel="noreferrer noopener" href="https://www.nexusmods.com/skyrimspecialedition/mods/83598" data-type="URL" data-id="https://www.nexusmods.com/skyrimspecialedition/mods/83598" target="_blank">Panda</a> kindly send me the enbImgLoader plugin crashlog which happened to people some times.</p>
 
 
 
@@ -319,11 +319,11 @@ PROBABLE CALL STACK:
 
 
 
-<p>Which is fine when input buffer is allocated at length MAX_PATH like I&#8217;m using it in other places, but in this case, paths[idx] is not guaranteed such, hence access violation when conversion worker walks out of bound.</p>
+<p>It is fine when input buffer is allocated with length MAX_PATH like I&#8217;m using in other places, but in this case, paths[idx] is not guaranteed such, hence access violation when conversion worker walks out of bound.</p>
 
 
 
-<p>The fix is simply replace MAX_PATH with -1</p>
+<p>The fix is simply replacing MAX_PATH with -1</p>
 
 
 
