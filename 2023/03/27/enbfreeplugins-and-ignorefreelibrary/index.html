@@ -368,7 +368,11 @@ window.codeBlockPro = {"pluginUrl":"http:\/\/kingeric1992.github.io\/blog\/wp-co
 
 
 
-<p>As shown in above trace log, the enbseries d3d11.dll would get unmapped from game through FreeLibrary calls, while dllplugins still remains in game memory. Which means two things: the plugin&#8217;s callback that was registered to enbseries when it&#8217;s first loaded is invalidated, and secondly, plugin&#8217;s DllMain PROC_ATTACH won&#8217;t get invoked again when enbseries loads dllplugins the second time. So, the result is that the dllplugin ends up not receving any enb events if it relied on PROC_ATTACH to initialize and register for enb callbacks.</p>
+<p>As shown in above trace log, the enbseries d3d11.dll would get unmapped from game through FreeLibrary calls, while dllplugins still remains in game memory. </p>
+
+
+
+<p>Which means two things: the plugin&#8217;s callback that was registered to enbseries when it&#8217;s first loaded is invalidated, and secondly, plugin&#8217;s DllMain PROC_ATTACH won&#8217;t get invoked again when enbseries loads dllplugins the second time. So, the result is that the dllplugin ends up not receving any enb events if it relied on PROC_ATTACH to initialize and register for enb callbacks.</p>
 
 
 
@@ -376,7 +380,7 @@ window.codeBlockPro = {"pluginUrl":"http:\/\/kingeric1992.github.io\/blog\/wp-co
 
 
 
-<div class="wp-block-kevinbatdorf-code-block-pro cbp-has-line-numbers" style="font-size:.875rem;--cbp-line-number-color:#d8dee9ff;--cbp-line-number-width:15.40625px;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg></span><span role="button" tabindex="0" data-code="HMODULE LoadLibraryA_hook(LPCSTR cstr)
+<div class="wp-block-kevinbatdorf-code-block-pro cbp-has-line-numbers" style="font-size:.875rem;--cbp-line-number-color:#d8dee9ff;--cbp-line-number-width:16.866668701171875px;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg></span><span role="button" tabindex="0" data-code="HMODULE LoadLibraryA_hook(LPCSTR cstr)
 {
     if (auto l = strnlen_s(cstr, MAX_PATH); l &gt; 10 &amp;&amp; !strcmp(cstr + l - 10, &quot;.dllplugin&quot;))
     {
@@ -414,7 +418,7 @@ window.codeBlockPro = {"pluginUrl":"http:\/\/kingeric1992.github.io\/blog\/wp-co
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" src="https://kingeric1992.github.io/blog/wp-content/uploads/2023/03/screenshot.png" alt="" class="wp-image-28"/></figure>
+<figure class="wp-block-image size-full"><img decoding="async" width="571" height="28" src="https://kingeric1992.github.io/blog/wp-content/uploads/2023/03/screenshot.png" alt="" class="wp-image-45" srcset="https://kingeric1992.github.io/blog/wp-content/uploads/2023/03/screenshot.png 571w, https://kingeric1992.github.io/blog/wp-content/uploads/2023/03/screenshot-300x15.png 300w" sizes="(max-width: 571px) 100vw, 571px" /></figure>
 
 
 
@@ -428,7 +432,7 @@ window.codeBlockPro = {"pluginUrl":"http:\/\/kingeric1992.github.io\/blog\/wp-co
         <div style="font-size:var(--wp--custom--font-sizes--x-small);" class="is-style-post-author-icon wp-block-post-author"><div class="wp-block-post-author__content"><p class="wp-block-post-author__name">kingeric1992</p></div></div>
         <div style="font-size:var(--wp--custom--font-sizes--x-small);" class="is-style-post-date-icon wp-block-post-date"><time datetime="2023-03-27T21:47:20+00:00"><a href="https://kingeric1992.github.io/blog/2023/03/27/enbfreeplugins-and-ignorefreelibrary/">March 27, 2023</a></time></div>
         <div style="font-size:var(--wp--custom--font-sizes--x-small)" class="taxonomy-category is-style-post-category-icon wp-block-post-terms"><a href="https://kingeric1992.github.io/blog/category/devlog/" rel="tag">Devlog</a></div>
-        
+        <div style="font-size:var(--wp--custom--font-sizes--x-small)" class="taxonomy-post_tag is-style-post-tag-icon wp-block-post-terms"><a href="https://kingeric1992.github.io/blog/tag/dllplugin/" rel="tag">dllplugin</a><span class="wp-block-post-terms__separator">, </span><a href="https://kingeric1992.github.io/blog/tag/enbseries/" rel="tag">enbseries</a></div>
     </div>
     
 </div>
@@ -449,7 +453,7 @@ window.codeBlockPro = {"pluginUrl":"http:\/\/kingeric1992.github.io\/blog\/wp-co
 			
 			
 			<div class="is-layout-flow wp-block-column">
-				<div class="post-navigation-link-next has-text-align-right wp-block-post-navigation-link"></div>
+				<div class="post-navigation-link-next has-text-align-right wp-block-post-navigation-link"><span class="post-navigation-link__label">→</span> <a href="https://kingeric1992.github.io/blog/2023/03/29/enbimageloader-fixed/" rel="next">enbImageLoader fixed</a></div>
 			</div>
 			
 		</div>

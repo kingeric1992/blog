@@ -163,6 +163,9 @@
 <style id='wp-block-post-featured-image-inline-css'>
 .wp-block-post-featured-image{margin-left:0;margin-right:0}.wp-block-post-featured-image a{display:block}.wp-block-post-featured-image img{max-width:100%;width:100%;height:auto;vertical-align:bottom;box-sizing:border-box}.wp-block-post-featured-image.alignfull img,.wp-block-post-featured-image.alignwide img{width:100%}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim{position:absolute;inset:0;background-color:#000}.wp-block-post-featured-image{position:relative}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-gradient{background-color:transparent}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-0{opacity:0}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-10{opacity:.1}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-20{opacity:.2}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-30{opacity:.3}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-40{opacity:.4}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-50{opacity:.5}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-60{opacity:.6}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-70{opacity:.7}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-80{opacity:.8}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-90{opacity:.9}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-100{opacity:1}
 </style>
+<style id='wp-block-paragraph-inline-css'>
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;line-height:.68;font-weight:100;margin:.05em .1em 0 0;text-transform:uppercase;font-style:normal}p.has-drop-cap.has-background{overflow:hidden}p.has-background{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}
+</style>
 <style id='wp-block-post-excerpt-inline-css'>
 .wp-block-post-excerpt__more-link{display:inline-block}
 </style>
@@ -252,7 +255,30 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 <main class="is-layout-constrained wp-block-query">
 	<h1 style="margin-bottom:160px;" class="wp-block-query-title">Year: <span>2023</span></h1>
-	<ul class="is-layout-flow wp-block-post-template"><li class="wp-block-post post-12 post type-post status-publish format-standard hentry category-devlog">
+	<ul class="is-layout-flow wp-block-post-template"><li class="wp-block-post post-47 post type-post status-publish format-standard hentry category-devlog tag-dllplugin tag-enbseries">
+		
+		<div class="is-layout-constrained wp-block-group">
+		<h3 style="margin-bottom:calc(2 * var(--wp--style--block-gap));" class="has-text-align-left wp-block-post-title"><a href="https://kingeric1992.github.io/blog/2023/03/29/enbimageloader-fixed/" target="_self" >enbImageLoader fixed</a></h3>
+		
+		<div class="wp-block-post-excerpt"><p class="wp-block-post-excerpt__excerpt">Fixing a stupid error in my plugin. Panda kindly send me the crashlog when enbImageLoader plugin crashes which happened to people some times. After looking at callstack and memory offset to the mod, the culprit is clearly this: Which is fine when input buffer is allocated at length MAX_PATH like I&#8217;m using it in other [&hellip;] </p></div>
+		<div class="wp-block-template-part">
+<div class="is-layout-constrained wp-block-group">
+    
+    <div class="is-layout-flex wp-block-group post-meta">
+        <div style="font-size:var(--wp--custom--font-sizes--x-small);" class="is-style-post-author-icon wp-block-post-author"><div class="wp-block-post-author__content"><p class="wp-block-post-author__name">kingeric1992</p></div></div>
+        <div style="font-size:var(--wp--custom--font-sizes--x-small);" class="is-style-post-date-icon wp-block-post-date"><time datetime="2023-03-29T01:25:21+00:00"><a href="https://kingeric1992.github.io/blog/2023/03/29/enbimageloader-fixed/">March 29, 2023</a></time></div>
+        <div style="font-size:var(--wp--custom--font-sizes--x-small)" class="taxonomy-category is-style-post-category-icon wp-block-post-terms"><a href="https://kingeric1992.github.io/blog/category/devlog/" rel="tag">Devlog</a></div>
+        <div style="font-size:var(--wp--custom--font-sizes--x-small)" class="taxonomy-post_tag is-style-post-tag-icon wp-block-post-terms"><a href="https://kingeric1992.github.io/blog/tag/dllplugin/" rel="tag">dllplugin</a><span class="wp-block-post-terms__separator">, </span><a href="https://kingeric1992.github.io/blog/tag/enbseries/" rel="tag">enbseries</a></div>
+    </div>
+    
+</div>
+</div>
+		
+		<div style="height:120px" aria-hidden="true" class="wp-block-spacer"></div>
+		
+		</div>
+		
+	</li><li class="wp-block-post post-12 post type-post status-publish format-standard hentry category-devlog tag-dllplugin tag-enbseries">
 		
 		<div class="is-layout-constrained wp-block-group">
 		<h3 style="margin-bottom:calc(2 * var(--wp--style--block-gap));" class="has-text-align-left wp-block-post-title"><a href="https://kingeric1992.github.io/blog/2023/03/27/enbfreeplugins-and-ignorefreelibrary/" target="_self" >enbFreePlugins and IgnoreFreeLibrary</a></h3>
@@ -265,7 +291,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         <div style="font-size:var(--wp--custom--font-sizes--x-small);" class="is-style-post-author-icon wp-block-post-author"><div class="wp-block-post-author__content"><p class="wp-block-post-author__name">kingeric1992</p></div></div>
         <div style="font-size:var(--wp--custom--font-sizes--x-small);" class="is-style-post-date-icon wp-block-post-date"><time datetime="2023-03-27T21:47:20+00:00"><a href="https://kingeric1992.github.io/blog/2023/03/27/enbfreeplugins-and-ignorefreelibrary/">March 27, 2023</a></time></div>
         <div style="font-size:var(--wp--custom--font-sizes--x-small)" class="taxonomy-category is-style-post-category-icon wp-block-post-terms"><a href="https://kingeric1992.github.io/blog/category/devlog/" rel="tag">Devlog</a></div>
-        
+        <div style="font-size:var(--wp--custom--font-sizes--x-small)" class="taxonomy-post_tag is-style-post-tag-icon wp-block-post-terms"><a href="https://kingeric1992.github.io/blog/tag/dllplugin/" rel="tag">dllplugin</a><span class="wp-block-post-terms__separator">, </span><a href="https://kingeric1992.github.io/blog/tag/enbseries/" rel="tag">enbseries</a></div>
     </div>
     
 </div>
